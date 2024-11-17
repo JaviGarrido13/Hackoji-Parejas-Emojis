@@ -35,6 +35,20 @@ function girarCarta(){
     comprobarPareja()
 }
 
+function comprobarPareja(){
+    bloqueado = true
+    intentos++
+    document.getElementById("contador").textContent = intentos
+
+    const esPareja = primeraCarta.dataset.emoji === segundaCarta.dataset.emoji
+
+    if(esPareja){
+        desactivarCartas()
+    } else {
+        ocultarCartas()
+    }
+}
+
 
 
 
