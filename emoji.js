@@ -7,3 +7,4 @@ let intentos = 0
 let primeraCarta, segundaCarta
 
 cartas = cartas.sort(()=> Math.random())
+const tablero = document.getElementById(`tablero`);
