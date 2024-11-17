@@ -8,7 +8,7 @@ let primeraCarta, segundaCarta
 let bloqueado = false;
 
 cartas = cartas.sort(()=> Math.random())// ver que hace el Math.random
-const tablero = document.getElementById(`tablero`);
+const tablero = document.getElementById("tablero");
 
 cartas.forEach((emoji, index)=>{
     const carta=document.createElement("div"); //creamos elemento div por cada carta.
@@ -19,12 +19,21 @@ cartas.forEach((emoji, index)=>{
     tablero.append(carta);
 });
 
- function girarCarta(){
+function girarCarta(){
     if (bloqueado) return;
+    const cartaSelecionada = event.target
+    if (cartaSelecionada === primeraCarta) return
 
-        
-    
- }
+    cartaSelecionada.classList.add("revelada")
+    cartaSelecionada.textContent = this.dataset.emoji
+
+    if(!primeraCarta){
+        primeraCarta = cartaSelecionada
+        return
+    }
+    segundaCarta = cartaSelecionada
+    comprobarPareja()
+}
 
 
 
@@ -33,7 +42,7 @@ cartas.forEach((emoji, index)=>{
 
 
 
- const cards = document.querySelectorAll(".card");
+/*  const cards = document.querySelectorAll(".card");
 
 const reveal = (e) => {
   const currentCard = e.currentTarget;
@@ -47,11 +56,11 @@ const reveal = (e) => {
 for (const card of cards) {
   card.addEventListener("click", reveal);
 }
+ */
 
 
 
-
-/* .card.flipped .content {
+/*  .card.flipped .content {
     transform: rotateY( 180deg ) ;
     transition: transform 0.5s;
   } */
