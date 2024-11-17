@@ -7,25 +7,26 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: green;
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
 }
 
 h1 {
     text-align: center;
     font-weight: bold;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
-p {
+.controles{
     text-align: center;
-    padding-top: 10px;
+    margin: 20px;
 }
-
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
 #tablero {
     display: grid;
-    grid-template-columns: repeat(4, 150px);
+    grid-template-columns: repeat(4, 200px);
     grid-gap: 15px;
     margin-top: 20px;
     perspective: 1000px;
@@ -50,21 +51,6 @@ p {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(black, gray);
-    display: grid;
-    place-content: center;
-    font-size: 8rem;
-    border-radius: 1rem;
-    backface-visibility: hidden;
-    user-select: none;
-}
-
-
-
 .carta:hover {
     transform: scale(1.05);
 }
@@ -72,4 +58,25 @@ p {
 .carta.revelada{
     transform: rotateY( 180deg ) ;
     transition: transform 0.5s;
+    background: linear-gradient(black, gray);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.contenido-modal{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
 }

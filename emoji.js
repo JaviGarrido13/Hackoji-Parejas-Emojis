@@ -2,26 +2,64 @@
 
 const emojis = ["👽",'🚴‍♂️', '🍆', '💾', '🦑', '🌈', '🎩', '🎸']
 
-let cartas = [...emojis, ...emojis]
+let cartas = []
 let intentos = 0
-let primeraCarta, segundaCarta
+let primeraCarta = null
+let segundaCarta = null
 let bloqueado = false;
+let parejasEncontradas = 0
 
-cartas = cartas.sort(()=> Math.random()-0.5)// ver que hace el Math.random
-const tablero = document.getElementById("tablero");
+const tablero = document.getElementById('tablero')
+const btnIniciar = document.getElementById('iniciar')
+const btnReiniciar = document.getElementById('reiniciar')
+const contador = document.getElementById('contador')
+const modal = document.getElementById('modal')
+const cerrarModal = document.getElementById('cerrarModal')
+const intentosFinales = document.getElementById('intentosFinales')
 
-cartas.forEach((emoji, index)=>{
-    const carta=document.createElement("div"); //creamos elemento div por cada carta.
-    carta.classList.add("carta");               //añadimos la clase carta al div
-    carta.dataset.emoji=emoji;                  
-    carta.addEventListener("click", girarCarta) //evento de click
-    tablero.append(carta);
-});
+btnIniciar.addEventListener('click', iniciarJuego)
+btnReiniciar.addEventListener('click', reiniciarJuego)
+cerrarModal.addEventListener('click', fueraModal)
 
-function girarCarta(){
+function iniciarJuego(){
+  btnIniciar.disabled = true
+  btnReiniciar.disabled = false // desactivo boton iniciar, activo reiniciar
+
+  intentos = 0
+  parejasEncontradas = 0
+  contador.textContent = intentos
+
+  cartas = [...emojis, ...emojis]
+  cartas.sort(()=>Math.random()-0.5) // duplico cartas y mezclamos
+
+  tablero.innerHTML = '' // Partimos de tablero vacio y metemos cartas
+  cartas.forEach((emoji)=>{
+    const carta = document.createElement('div')
+    carta.classList.add('carta')
+    carta.dataset.emoji = emoji
+    carta.addEventListener('click', girarCarta)
+    tablero.append(carta)
+  })
+}
+
+function reiniciarJuego(){
+  intentos = 0
+  parejasEncontradas = 0
+  contador.textContent = intentos
+  primeraCarta = null
+  segundaCarta = null
+  bloqueado = false
+
+  iniciarJuego() // reinicio valores e inicio el juego
+}
+
+
+function girarCarta(event){
     if (bloqueado) return;
+
     const cartaSelecionada = event.target
-    if (cartaSelecionada === primeraCarta) return
+
+    if (cartaSelecionada === primeraCarta || cartaSelecionada.classList.contains('revelada')) return
 
     cartaSelecionada.classList.add("revelada")
     cartaSelecionada.textContent = cartaSelecionada.dataset.emoji
@@ -37,12 +75,16 @@ function girarCarta(){
 function comprobarPareja(){
     bloqueado = true
     intentos++
-    document.getElementById("contador").textContent = intentos
+    contador.textContent = intentos
 
     const esPareja = primeraCarta.dataset.emoji === segundaCarta.dataset.emoji
 
     if(esPareja){
+        parejasEncontradas++
         desactivarCartas()
+        if(parejasEncontradas === emojis.length){
+          mostrarModal() // si las encuentra todas activmaos modal
+        }
     } else {
         ocultarCartas()
     }
@@ -61,7 +103,7 @@ function ocultarCartas() {
     primeraCarta.textContent = "";
     segundaCarta.textContent = "";
      resetearCartas()
-  }, 2000)
+  }, 1000)
 }
 
 function resetearCartas() {
@@ -69,31 +111,11 @@ function resetearCartas() {
   bloqueado = false;
 }
 
-
-
-
-
-
-
-/*  const cards = document.querySelectorAll(".card");
-
-const reveal = (e) => {
-  const currentCard = e.currentTarget;
-  currentCard.classList.add("flipped");
-
-  setTimeout(() => {
-    currentCard.classList.remove("flipped");
-  }, 1000);
-};
-
-for (const card of cards) {
-  card.addEventListener("click", reveal);
+function mostrarModal(){
+  intentosFinales.textContent = intentos
+  modal.style.display = 'flex'  // display felx al modal
 }
- */
 
-
-
-/*  .card.flipped .content {
-    transform: rotateY( 180deg ) ;
-    transition: transform 0.5s;
-  } */
+function fueraModal(){
+  modal.style.display = 'none'
+}
