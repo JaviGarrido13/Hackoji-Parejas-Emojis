@@ -7,7 +7,7 @@ let intentos = 0
 let primeraCarta, segundaCarta
 let bloqueado = false;
 
-cartas = cartas.sort(()=> Math.random())// ver que hace el Math.random
+cartas = cartas.sort(()=> Math.random()-0.5)// ver que hace el Math.random
 const tablero = document.getElementById("tablero");
 
 cartas.forEach((emoji, index)=>{
@@ -25,7 +25,7 @@ function girarCarta(){
     if (cartaSelecionada === primeraCarta) return
 
     cartaSelecionada.classList.add("revelada")
-    cartaSelecionada.textContent = this.dataset.emoji
+    cartaSelecionada.textContent = cartaSelecionada.dataset.emoji
 
     if(!primeraCarta){
         primeraCarta = cartaSelecionada
