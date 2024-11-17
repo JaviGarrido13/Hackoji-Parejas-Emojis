@@ -1,6 +1,6 @@
 "use strict"
 
-const emojis = ["😀",'🐱', '🍎', '🚗', '⚽', '🌈', '🎩', '🎸']
+const emojis = ["👽",'🚴‍♂️', '🍆', '💾', '🦑', '🌈', '🎩', '🎸']
 
 let cartas = [...emojis, ...emojis]
 let intentos = 0
@@ -14,7 +14,6 @@ cartas.forEach((emoji, index)=>{
     const carta=document.createElement("div"); //creamos elemento div por cada carta.
     carta.classList.add("carta");               //añadimos la clase carta al div
     carta.dataset.emoji=emoji;                  
-    carta.dataset.index=index;
     carta.addEventListener("click", girarCarta) //evento de click
     tablero.append(carta);
 });
@@ -49,6 +48,26 @@ function comprobarPareja(){
     }
 }
 
+function desactivarCartas() {
+    primeraCarta.removeEventListener("click", girarCarta);
+    segundaCarta.removeEventListener("click", girarCarta);
+    resetearCartas();
+}
+
+function ocultarCartas() {
+  setTimeout(() => {
+    primeraCarta.classList.remove("revelada");
+    segundaCarta.classList.remove("revelada");
+    primeraCarta.textContent = "";
+    segundaCarta.textContent = "";
+     resetearCartas()
+  }, 2000)
+}
+
+function resetearCartas() {
+  [primeraCarta, segundaCarta] = [null, null];
+  bloqueado = false;
+}
 
 
 
