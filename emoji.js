@@ -134,7 +134,7 @@ function mostrarModal(){
   if (intentos <= 10){
     mensajeFinal.textContent=`¡¡Tremenndo!! maquina tu puntuación es: ${puntuacion}`;
 
-  } else if (intentos < 16) {
+  } else if (intentos <= 16) {
     mensajeFinal.textContent=`Eres muy normalito, tu puntiación es: ${puntuacion}`;
   } else {
     mensajeFinal.textContent=`Eres un paquete, tu puntiación es: ${puntuacion}`;
