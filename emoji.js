@@ -102,8 +102,10 @@ function ocultarCartas() {
     segundaCarta.classList.remove("revelada");
     primeraCarta.textContent = "";
     segundaCarta.textContent = "";
-     resetearCartas()
-  }, 1000)
+  setTimeout(() => {
+    resetearCartas();
+  }, 500);
+},1000);
 }
 
 function resetearCartas() {
@@ -119,3 +121,4 @@ function mostrarModal(){
 function fueraModal(){
   modal.style.display = 'none'
 }
+

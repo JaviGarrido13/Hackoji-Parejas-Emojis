@@ -6,7 +6,14 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    /*background-image: url('fieltro.jpg');*/
     background-color: green;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 h1 {
@@ -19,14 +26,16 @@ h1 {
     text-align: center;
     margin: 20px;
 }
+
 button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
 }
+
 #tablero {
     display: grid;
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
     margin-top: 20px;
     perspective: 1000px;
@@ -45,10 +54,18 @@ button {
     background: linear-gradient(to bottom, #ffefeb, #ffffff, #b1b1b1);
     cursor: pointer;
     transform-style: preserve-3d;
-    transition: transorm 0.6s;
+    transition: transform 0.5s;
     box-shadow: 0 5px 8px rbga(0,0,0,0.5);
     border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-image: url('hack-a-boss-logo.png');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-color: black;
+    transform: rotateY(0deg);
 }
 
 .carta:hover {
@@ -56,9 +73,9 @@ button {
 }
 
 .carta.revelada{
-    transform: rotateY( 180deg ) ;
+    transform: rotateY(180deg);
     transition: transform 0.5s;
-    background: linear-gradient(black, gray);
+    background: white;
 }
 
 .modal {
@@ -73,6 +90,7 @@ button {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 .contenido-modal{
     background-color: whitesmoke;
     padding: 20px;
