@@ -45,8 +45,8 @@ button {
 }
 
 .carta {
-    width: 120px;
-    height: 180px;
+    width: 5rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,4 +97,31 @@ button {
     border-radius: 8px;
     text-align: center;
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+////////////////////////
+//    media query    ///
+////////////////////////
+
+@media (max-width: 767px) {
+    .carta {
+        width: 5rem;
+        height: 8rem;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .carta {
+        width: 8rem;
+        height: 11.5rem;
+       
+    }
+}
+@media (min-width: 1024px)  {
+    .carta {
+        width: 8rem;
+        height: 11.8rem;
+    }
 }
