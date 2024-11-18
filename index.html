@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="emoji.css">
 </head>
 <body>
-    <h1>Parejas de Emoji</h1>
-    <menu class="controles">
-        <button id="iniciar">Iniciar Juego</button>
-        <button id="reiniciar" disabled>Reiniciar</button>
-        <p id="parrafo-intentos">Intentos: <span id="contador">0</span></p>
-      </menu>
-      <div id="tablero"></div>
-    
-      <!-- Modal de victoria-->
-      <div id="modal" class="modal">
-        <div class="contenido-modal">
-          <h2>¡Felicidades!</h2>
-          <p>Has encontrado todas las parejas en <span id="intentosFinales">0</span> intentos.</p>
-          <button id="cerrarModal">Cerrar</button>
+    <header>
+      <h1>Parejas de Emoji</h1>
+    </header>
+    <main>
+        <menu class="controles">
+            <button id="iniciar">Iniciar Juego</button>
+            <button id="reiniciar" disabled>Reiniciar</button>
+            <p id="parrafo-intentos">Intentos: <span id="contador">0</span></p>
+          </menu>
+        <div id="tablero"></div>
+        <!-- Modal de victoria-->
+        <div id="modal" class="modal">
+          <div class="contenido-modal">
+            <h2>¡Felicidades!</h2>
+            <p>Has encontrado todas las parejas en <span id="intentosFinales">0</span> intentos.</p>
+            <button id="cerrarModal">Cerrar</button>
+          </div>
         </div>
-      </div>
-      <div class="banner">
-      </div>
+      </main>
     <footer>© esPajeraTeam</footer>
     <script src="./emoji.js"></script>
 </body>

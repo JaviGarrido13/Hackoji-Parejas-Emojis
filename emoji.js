@@ -105,6 +105,7 @@ function ocultarCartas() {
     segundaCarta.classList.remove("revelada");
     primeraCarta.textContent = "";
     segundaCarta.textContent = "";
+    
   setTimeout(() => {
     resetearCartas();
   }, 500);
