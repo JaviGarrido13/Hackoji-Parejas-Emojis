@@ -117,8 +117,28 @@ function resetearCartas() {
   bloqueado = false;
 }
 
+let puntosBase = 1000;
+let penalizacion = 20
+const mensajeFinal =document.getElementById("mensajeFinal")
+
+function calculo() {
+  return Math.max(0 , puntosBase-intentos*penalizacion)
+}
+
+
+
 function mostrarModal(){
-  intentosFinales.textContent = intentos
+  const puntuacion = calculo () ;
+  intentosFinales.textContent = `Intentos: ${intentos}`
+  
+  if (intentos <= 10){
+    mensajeFinal.textContent=`¡¡Tremenndo!! maquina tu puntuación es: ${puntuacion}`;
+
+  } else if (intentos < 16) {
+    mensajeFinal.textContent=`Eres muy normalito, tu puntiación es: ${puntuacion}`;
+  } else {
+    mensajeFinal.textContent=`Eres un paquete, tu puntiación es: ${puntuacion}`;
+  }
   modal.style.display = 'flex'  // display felx al modal
 }
 
