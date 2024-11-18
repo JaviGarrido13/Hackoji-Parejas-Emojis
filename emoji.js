@@ -12,6 +12,7 @@ let parejasEncontradas = 0
 const tablero = document.getElementById('tablero')
 const btnIniciar = document.getElementById('iniciar')
 const btnReiniciar = document.getElementById('reiniciar')
+const parrafointentos = document.getElementById('parrafo-intentos')
 const contador = document.getElementById('contador')
 const modal = document.getElementById('modal')
 const cerrarModal = document.getElementById('cerrarModal')
@@ -40,6 +41,8 @@ function iniciarJuego(){
     carta.addEventListener('click', girarCarta)
     tablero.append(carta)
   })
+  tablero.style.visibility = "visible";
+  parrafointentos.style.visibility = "visible";
 }
 
 function reiniciarJuego(){
@@ -121,4 +124,3 @@ function mostrarModal(){
 function fueraModal(){
   modal.style.display = 'none'
 }
-

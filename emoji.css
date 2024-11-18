@@ -5,24 +5,26 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
-    background-color: green;
+    font-family: Helvetica;
+    /* background-color: green; */
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
 }
 
 h1 {
     text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 150%;
-    padding-top: 10px;
-    color: white
+    /* font-size: 150%; */
+    padding: 1rem;
+    border-radius: 9px;
 }
 
 .banner {
@@ -47,26 +49,33 @@ h1 {
 
 button {
     margin: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 1rem;
     font-family: Helvetica, sans-serif;
     color: white;
     background-color: black;
+    border-radius: 9px;
 }
 
 #tablero {
     display: grid;
+    visibility: hidden;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    margin-top: 15px;
+    background-image: url("./Recursos/perfect-green-grass.jpg");
+    background-size: contain;
+    grid-gap: 0.625rem;
+    /* margin-top: 15px; */
     perspective: 1000px;
-    padding-top: 20px;
-    margin-bottom: 100px;
+    padding: 10px;
+    justify-content: center;
+    /* margin-bottom: 100px; */
+    border: 2px, solid black;
+    border-radius: 15px;
 }
 
 .carta {
-    width: 120px;
-    height: 180px;
+    width: 1.5em;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,37 +127,58 @@ button {
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
 }
 
-p span#contador {
-    color: white;
+#parrafo-intentos {
+    visibility: hidden;
 }
 
-menu.controles p {
+/* p span#contador {
     color: white;
-}
+} */
 
+/* menu.controles p {
+    color: white;
+} */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    /* padding-bottom: 0.5rem; */
+}
 
 
 /*////////////////////////
 //    media query    ///
 ////////////////////////*/
 
-@media (max-width: 767px) {
+
+@media (min-width: 389px) and (min-height: 840px) {
+    
+    #tablero {
+        margin-top: 3rem;
+    }
+    
     .carta {
         width: 5rem;
         height: 8rem;
     }
 
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   
+   #tablero {
+    margin-top: 0;
+   }
+
     .carta {
-        width: 8rem;
-        height: 11.5rem;
+        width: 10rem;
+        height: 12rem;
        
     }
 }
 @media (min-width: 1024px)  {
     .carta {
-        width: 8rem;
-        height: 11.8rem;
+        width: 11.5rem;
+        height: 16rem;
     }
 }
