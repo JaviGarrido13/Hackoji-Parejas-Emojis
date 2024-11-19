@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Parejas de Emoji</title>
-    <link rel="stylesheet" href="emoji.css">
+    <link rel="icon" type="image/png" href="./Favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./Favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./Favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Hackoji" />
+    <link rel="manifest" href="./Favicon/site.webmanifest" />
+    <link rel="stylesheet" href="portada.css">
+    <title>Hackoji - Card Game</title>
 </head>
 <body>
-    <header>
-      <h1 id="titulo">HACKOJI</h1>
-      <menu id="toggle-modo" class="modo-toggle">
-        <button id="modo-claro" class="modo-boton"></button>
-        <button id="modo-oscuro" class="modo-boton"></button>
-      </menu>
-    </header>
-    <main>
-        <menu id="controles" class="controles">
-            <button id="iniciar">Iniciar Juego</button>
-            <button id="reiniciar" disabled>Reiniciar</button>
-            <p id="parrafo-intentos">Intentos: <span id="contador">0</span></p>
-          </menu>
-        <section id="tablero"></section>
-        <!-- Modal de victoria-->
-        <div id="modal" class="modal">
-          <div class="contenido-modal">
-            <h2>¡Juego terminado!</h2>
-                <p id="intentosFinales"></p>
-                <p id ="mensajeFinal"></p>
-              <button id="cerrarModal">Cerrar</button>
-          </div>
-        </div>
-      </main>
-    <footer>© Hackoji Team.</footer>
-    <script src="./emoji.js"></script>
+    <!-- Añadimos un Svg al cual le metemos estilos y colores en su css -->
+    <svg viewBox="0 0 1320 300">
+        <symbol id="s-text">
+            <text text-anchor="middle"
+                x="50%" y="50%" dy=".35em">
+            Hackoji
+            </text>
+        </symbol>  
+        <!-- Simbolos duplicados para cada uno de los colores -->
+        <use xlink:href="#s-text" class="text"
+                ></use>
+        <use xlink:href="#s-text" class="text"
+                ></use>
+        <use xlink:href="#s-text" class="text"
+                ></use>
+        <use xlink:href="#s-text" class="text"
+                ></use>
+        <use xlink:href="#s-text" class="text"
+                ></use>
+    </svg>
+    <a href="./emojis.html">Entrar</a>
 </body>
 </html>
