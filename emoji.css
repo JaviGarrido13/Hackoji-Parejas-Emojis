@@ -187,3 +187,27 @@ footer {
         height: 10rem;
     }
 }
+
+#boton-noche {
+    position: fixed;
+    right: 15px; 
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Recursos/moon_stars.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+#boton-dia {
+    position: fixed;
+    right: 15px; 
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    background-image: url('/Recursos/sunshine_.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
