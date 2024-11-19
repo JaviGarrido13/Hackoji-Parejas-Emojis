@@ -8,6 +8,8 @@ let primeraCarta = null
 let segundaCarta = null
 let bloqueado = false;
 let parejasEncontradas = 0
+let puntosBase = 1000;
+let penalizacion = 20
 
 const tablero = document.getElementById('tablero')
 const btnIniciar = document.getElementById('iniciar')
@@ -17,6 +19,7 @@ const contador = document.getElementById('contador')
 const modal = document.getElementById('modal')
 const cerrarModal = document.getElementById('cerrarModal')
 const intentosFinales = document.getElementById('intentosFinales')
+const mensajeFinal =document.getElementById("mensajeFinal")
 
 btnIniciar.addEventListener('click', iniciarJuego)
 btnReiniciar.addEventListener('click', reiniciarJuego)
@@ -55,7 +58,6 @@ function reiniciarJuego(){
 
   iniciarJuego() // reinicio valores e inicio el juego
 }
-
 
 function girarCarta(event){
     if (bloqueado) return;
@@ -117,15 +119,10 @@ function resetearCartas() {
   bloqueado = false;
 }
 
-let puntosBase = 1000;
-let penalizacion = 20
-const mensajeFinal =document.getElementById("mensajeFinal")
 
 function calculo() {
   return Math.max(0 , puntosBase-intentos*penalizacion)
 }
-
-
 
 function mostrarModal(){
   const puntuacion = calculo () ;
