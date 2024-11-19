@@ -11,21 +11,21 @@ Por qué el proyecto es útil.
 
 
 Dónde pueden recibir ayuda los usuarios con tu proyecto.
-Puedes contactar con cada uno de los miembros del equipo que han realizado este proyecto.
+    Puedes contactar con cada uno de los miembros del equipo que han realizado este proyecto.
 
-Mohamed
-Javier Garrido Valderas.    fjgarridovalderas@hotmail.com
-Javier Navarro Robles.      javinavarrorobles@gmail.com
-Jaimer Olveira lopez.       jaime.olvera.l@gmail.com
+    Mohamed
+    Javier Garrido Valderas.    fjgarridovalderas@hotmail.com
+    Javier Navarro Robles.      javinavarrorobles@gmail.com
+    Jaimer Olveira lopez.       jaime.olvera.l@gmail.com
 
 Quién mantiene y contribuye con el proyecto.
 
-El proyecto lo pueden meter los miembros de equipo 
+    El proyecto lo pueden meter los miembros de equipo 
 
-Mohamed
-Javier Garrido Valderas.
-Jaimer Olveira lopez.
-Javier Navarro Robles.
+    Mohamed
+    Javier Garrido Valderas.
+    Jaimer Olveira lopez.
+    Javier Navarro Robles.
 
 
- 
+ git add
