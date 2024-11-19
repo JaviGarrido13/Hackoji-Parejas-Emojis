@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    background: #212121;
 }
 
 h1 {
@@ -38,7 +39,7 @@ main {
 
 .controles{
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 button {
@@ -134,21 +135,21 @@ button:disabled{
 
 #parrafo-intentos {
     visibility: hidden;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* p span#contador {
     color: white;
 } */
 
-/* menu.controles p {
+menu.controles p {
     color: white;
-} */
+}
 
 footer {
-    margin-top: 15px;
+    /* margin-top: 15px; */
     padding: 10px;
-    color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
     width: 100%; 
 }
@@ -162,8 +163,8 @@ footer {
     
     
     .carta {
-        width: 5rem;
-        height: 8rem;
+        width: 3rem;
+        height: 5rem;
     }
 
 }
@@ -171,14 +172,14 @@ footer {
 @media (min-width: 768px) and (max-width: 1024px) {
    
     .carta {
-        width: 10rem;
-        height: 12rem;
+        width: 5rem;
+        height: 7rem;
        
     }
 }
 @media (min-width: 1024px)  {
     .carta {
-        width: 11.5rem;
-        height: 16rem;
+        width: 7rem;
+        height: 10rem;
     }
 }
