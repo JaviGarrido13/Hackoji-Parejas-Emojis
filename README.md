@@ -13,7 +13,7 @@ Por qué el proyecto es útil.
 Dónde pueden recibir ayuda los usuarios con el proyecto.
 
     Puedes contactar con cada uno de los miembros del equipo que han realizado este proyecto:
-    Mohamed
+    Mohammed Chikri Laghzaoui   mohammedchikrilag@icloud.com 
     Javier Garrido Valderas.    fjgarridovalderas@hotmail.com
     Javier Navarro Robles.      javinavarrorobles@gmail.com
     Jaime Olvera Lopez.       jaime.olvera.l@gmail.com
@@ -22,7 +22,7 @@ Dónde pueden recibir ayuda los usuarios con el proyecto.
 Quién mantiene y contribuye con el proyecto.
 
     El proyecto se mantiene gracias a los miembros del equipo:
-    Mohamed
+    Mohammed Chikri Laghzaoui
     Javier Garrido Valderas.
     Jaime Olvera Lopez.
     Javier Navarro Robles.
