@@ -49,8 +49,8 @@ button {
     padding: 8px 16px;
     font-size: 2rem;
     font-family: Helvetica, sans-serif;
-    color: white;
-    background-color: black;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 9px;
     cursor: pointer;
     border: none;
@@ -70,7 +70,7 @@ button:disabled{
     display: grid;
     visibility: hidden;
     grid-template-columns: repeat(4, 1fr);
-    background-image: url("./Recursos/perfect-green-grass.jpg");
+    background-image: url("/Recursos/perfect-green-grass.webp");
     background-size: contain;
     grid-gap: 0.625rem;
     perspective: 1000px;
@@ -180,13 +180,46 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
 body.modo-claro {
     background-color: whitesmoke;
 }
+
 h1.modo-claro {
     background-color: black;
     color: white;
 }
+
+body.modo-claro {
+    background-color: #ffffff;
+}
+
+.controles.modo-claro {
+    color: black;
+}
+
+.controles.modo-claro button {
+    margin: 4px;
+    padding: 8px 16px;
+    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 9px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+footer.modo-claro {
+    margin-top: 15px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%; 
+}
+
 /*////////////////////////
 //    media query    ///
 ////////////////////////*/
