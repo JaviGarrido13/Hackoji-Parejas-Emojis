@@ -17,6 +17,10 @@ body {
     background: #212121;
 }
 
+header {
+    display: flex;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
