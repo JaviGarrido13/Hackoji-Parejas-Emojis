@@ -20,10 +20,13 @@ const modal = document.getElementById('modal')
 const cerrarModal = document.getElementById('cerrarModal')
 const intentosFinales = document.getElementById('intentosFinales')
 const mensajeFinal =document.getElementById("mensajeFinal")
+const btnModoClaro = document.getElementById('modo-claro')
+const btnModoOscuro = document.getElementById('modo-oscuro')
 
 btnIniciar.addEventListener('click', iniciarJuego)
 btnReiniciar.addEventListener('click', reiniciarJuego)
 cerrarModal.addEventListener('click', fueraModal)
+
 
 function iniciarJuego(){
   btnIniciar.disabled = true
@@ -142,3 +145,25 @@ function mostrarModal(){
 function fueraModal(){
   modal.style.display = 'none'
 }
+
+const titulo = document.getElementById('titulo')
+const controles = document.getElementById('controles')
+const footer = document.querySelector('footer')
+
+btnModoClaro.addEventListener('click', ()=>{
+  document.body.classList.add('modo-claro')
+  titulo.classList.add('modo-claro')
+  controles.classList.add('modo-claro')
+  footer.classList.add('modo-claro')
+  btnModoClaro.style.display='none'
+  btnModoOscuro.style.display='flex'
+})
+
+btnModoOscuro.addEventListener('click', ()=>{
+  document.body.classList.remove('modo-claro')
+  titulo.classList.remove('modo-claro')
+  controles.classList.remove('modo-claro')
+  footer.classList.remove('modo-claro')
+  btnModoClaro.style.display='flex'
+  btnModoOscuro.style.display='none'
+})

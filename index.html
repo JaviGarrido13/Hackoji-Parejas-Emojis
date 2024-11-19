@@ -8,12 +8,14 @@
 </head>
 <body>
     <header>
-      <h1>Hackoji</h1>
-      <button id="boton-noche"></button>
-      <button id="boton-dia"></button>
+      <h1 id="titulo">Hackoji</h1>
+      <menu id="toggle-modo" class="modo-toggle">
+        <button id="modo-claro" class="modo-boton"></button>
+        <button id="modo-oscuro" class="modo-boton"></button>
+      </menu>
     </header>
     <main>
-        <menu class="controles">
+        <menu id="controles" class="controles">
             <button id="iniciar">Iniciar Juego</button>
             <button id="reiniciar" disabled>Reiniciar</button>
             <p id="parrafo-intentos">Intentos: <span id="contador">0</span></p>

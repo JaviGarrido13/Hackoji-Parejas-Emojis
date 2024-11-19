@@ -20,8 +20,8 @@ body {
 h1 {
     text-align: center;
     font-weight: bold;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin-top: 20px;
     margin-bottom: 10px;
     padding: 1rem;
@@ -41,12 +41,13 @@ main {
     text-align: center;
     margin: 20px;
     color: white;
+    font-size: 20px;
 }
 
 button {
     margin: 4px;
     padding: 8px 16px;
-    font-size: 1rem;
+    font-size: 2rem;
     font-family: Helvetica, sans-serif;
     color: white;
     background-color: black;
@@ -86,7 +87,7 @@ button:disabled{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 5rem;
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -142,36 +143,50 @@ button:disabled{
 footer {
     margin-top: 15px;
     padding: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     width: 100%; 
+    font-size: 20px;
 }
 
-#boton-noche {
+.modo-toggle {
     position: fixed;
-    right: 15px; 
+    right: 20px; 
     top: 20px;
     height: 40px;
     width: 40px;
-    background-image: url('./Recursos/moon_stars.png');
-    background-position: center;
-    background-size: 80%;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: transparent;
+    border: none;
 }
-
-#boton-dia {
-    position: fixed;
-    right: 15px; 
-    top: 20px;
-    height: 40px;
+.modo-boton{
+    position: absolute;
+    border: none;
     width: 40px;
+    height: 40px;
+}
+#modo-claro{
     background-image: url('./Recursos/sunshine_.png');
+    background-size: 100%;
     background-position: center;
-    background-size: 80%;
     background-repeat: no-repeat;
 }
-
-
+#modo-oscuro{
+    display: none;
+    background-image: url('./Recursos/moon_stars.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body.modo-claro {
+    background-color: whitesmoke;
+}
+h1.modo-claro {
+    background-color: black;
+    color: white;
+}
 /*////////////////////////
 //    media query    ///
 ////////////////////////*/
@@ -179,10 +194,17 @@ footer {
 
 @media (min-width: 389px) and (min-height: 840px) {
     
+    .controles>button{
+        margin: 4px;
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
     
     .carta {
         width: 5rem;
         height: 8rem;
+        font-size: 3rem;
     }
 
 }
