@@ -9,30 +9,32 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Hackoji" />
     <link rel="manifest" href="./Favicon/site.webmanifest" />
-    <link rel="stylesheet" href="portada.css">
+    <link rel="stylesheet" href="emoji.css">
     <title>Hackoji - Card Game</title>
 </head>
 <body>
-    <!-- Añadimos un Svg al cual le metemos estilos y colores en su css -->
-    <svg viewBox="0 0 1320 300">
-        <symbol id="s-text">
-            <text text-anchor="middle"
-                x="50%" y="50%" dy=".35em">
-            Hackoji
-            </text>
-        </symbol>  
-        <!-- Simbolos duplicados para cada uno de los colores -->
-        <use xlink:href="#s-text" class="text"
-                ></use>
-        <use xlink:href="#s-text" class="text"
-                ></use>
-        <use xlink:href="#s-text" class="text"
-                ></use>
-        <use xlink:href="#s-text" class="text"
-                ></use>
-        <use xlink:href="#s-text" class="text"
-                ></use>
-    </svg>
-    <a href="./main.html">Entrar</a>
+  <header>
+    <h1>Hackoji</h1>
+    <button id="boton-noche"></button>
+    <button id="boton-dia"></button>
+  </header>
+  <main>
+      <menu class="controles">
+          <button id="iniciar">Iniciar Juego</button>
+          <button id="reiniciar" disabled>Reiniciar</button>
+          <p id="parrafo-intentos">Intentos: <span id="contador">0</span></p>
+        </menu>
+      <div id="tablero"></div>
+      <!-- Modal de victoria-->
+      <div id="modal" class="modal">
+        <div class="contenido-modal">
+          <h2>¡Felicidades!</h2>
+          <p>Has encontrado todas las parejas en <span id="intentosFinales">0</span> intentos.</p>
+          <button id="cerrarModal">Cerrar</button>
+        </div>
+      </div>
+  </main>
+  <footer>© Hackoji Team</footer>
+  <script src="./emoji.js"></script>
 </body>
 </html>
