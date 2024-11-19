@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    background-color: #212121;
 }
 
 h1 {
@@ -173,4 +174,28 @@ footer {
         width: 11.5rem;
         height: 16rem;
     }
+}
+
+#boton-noche {
+    position: fixed;
+    right: 15px; 
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    background-image: url('./Recursos/moon_stars.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+#boton-dia {
+    position: fixed;
+    right: 15px; 
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    background-image: url('./Recursos/sunshine_.png');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
