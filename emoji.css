@@ -44,6 +44,7 @@ main {
     font-size: 20px;
 }
 
+
 button {
     margin: 4px;
     padding: 8px 16px;
@@ -70,7 +71,7 @@ button:disabled{
     display: grid;
     visibility: hidden;
     grid-template-columns: repeat(4, 1fr);
-    background-image: url("/Recursos/perfect-green-grass.webp");
+    background-image: url("./Recursos/perfect-green-grass.webp");
     background-size: contain;
     grid-gap: 0.625rem;
     perspective: 1000px;
@@ -230,7 +231,6 @@ footer.modo-claro {
     .controles>button{
         margin: 4px;
         padding: 8px 16px;
-        font-size: 1rem;
     }
 
     
