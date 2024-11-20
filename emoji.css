@@ -1,7 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 html, body {
@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +20,8 @@ body {
 h1 {
     text-align: center;
     font-weight: bold;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: #fff;
+    color: #000;
     margin-top: 0.5rem;
     padding: 1rem;
     border-radius: 9px;
@@ -37,7 +37,7 @@ main {
     align-items: center;
 }
 
-.controles{
+.controles {
     text-align: center;
     margin: 20px;
     color: white;
@@ -48,27 +48,26 @@ button {
     padding: 8px 16px;
     font-size: 1rem;
     margin: 4px;
-    font-family: Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+    color: #000;
+    background-color: #fff;
     border-radius: 9px;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: silver;
 }
 
-button:disabled{
+button:disabled {
     cursor: not-allowed;
     opacity: 0.3;
 }
 
 #tablero {
     display: grid;
-    visibility: hidden;
+    visibility: hidden; 
     grid-template-columns: repeat(4, 1fr);
     background-image: url("./Recursos/perfect-green-grass.webp");
     background-size: contain;
@@ -77,7 +76,7 @@ button:disabled{
     padding: 10px;
     max-height: 90%;
     justify-content: center;
-    border: 2px, solid black;
+    border: 2px solid black; 
     border-radius: 15px;
 }
 
@@ -91,26 +90,21 @@ button:disabled{
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    box-shadow: 0 5px 8px rbga(0,0,0,0.5);
-    border-radius: 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
     background-image: url('./Recursos/hack-a-boss-logo.png');
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
     background-size: 80%;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: black;
 }
 
 .carta:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
+transform: scale(1.05);
 }
 
-.carta.revelada{
+.carta.revelada {
     transform: rotateY(180deg);
-    transition: transform 0.5s;
     background: white;
 }
 
@@ -127,7 +121,7 @@ button:disabled{
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.contenido-modal{
+.contenido-modal {
     background-color: rgba(245, 245, 245, 0.864);
     padding: 20px;
     border-radius: 8px;
@@ -143,7 +137,7 @@ button:disabled{
 footer {
     margin-top: 15px;
     padding: 10px;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-align: center;
     width: 100%; 
     font-size: 1rem;
@@ -157,25 +151,26 @@ footer {
     width: 40px;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     background-color: transparent;
     border: none;
 }
 
-.modo-boton{
+.modo-boton {
     position: absolute;
     border: none;
     width: 40px;
     height: 40px;
 }
 
-#modo-claro{
+#modo-claro {
     background-image: url('./Recursos/sunshine_.png');
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
-#modo-oscuro{
+
+#modo-oscuro {
     display: none;
     background-image: url('./Recursos/moon_stars.png');
     background-size: 100%;
@@ -183,19 +178,13 @@ footer {
     background-repeat: no-repeat;
 }
 
-
 body.modo-claro {
-    background-color: whitesmoke;
+    background-color: #ffffff;
 }
 
 h1.modo-claro {
     background-color: black;
     color: white;
-    font-size: 1em;
-}
-
-body.modo-claro {
-    background-color: #ffffff;
 }
 
 .controles.modo-claro {
@@ -208,24 +197,18 @@ body.modo-claro {
     margin: 4px;
     padding: 8px 16px;
     font-size: 1rem;
-    font-family: Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    color: #fff;
+    background-color: #000;
     border-radius: 9px;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
 }
-
 footer.modo-claro {
-    margin-top: 15px;
-    padding: 10px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    width: 100%; 
+    color: #000;
 }
 
-/*    media query    */
+/* Media Queries */
 
 @media (min-width: 530px) {
     .carta {

@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Parejas de Emoji</title>
+    <title>Hackoji - Card Game</title>
     <link rel="stylesheet" href="emoji.css">
+    <link rel="icon" type="image/png" href="./Favicon/favicon-96x96.png" sizes="96x96" /> <!-- Añadimos favicon -->
+    <link rel="icon" type="image/svg+xml" href="./Favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./Favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Hackoji" />
+    <link rel="manifest" href="./Favicon/site.webmanifest" />
 </head>
 <body>
     <header>
       <h1 id="titulo">HACKOJI</h1>
       <menu id="toggle-modo" class="modo-toggle">
-        <button id="modo-claro" class="modo-boton"></button>
-        <button id="modo-oscuro" class="modo-boton"></button>
+        <button id="modo-claro" class="modo-boton"></button> <!-- Añadimos boton para el modo claro en el juego -->
+        <button id="modo-oscuro" class="modo-boton"></button><!-- Añadimos boton para el modo oscuro en el juego -->
       </menu>
     </header>
     <main>
         <menu id="controles" class="controles">
-            <button id="iniciar">Iniciar Juego</button>
-            <button id="reiniciar" disabled>Reiniciar</button>
+            <button id="iniciar">Iniciar Juego</button><!-- Añadimos boton para iniciar el juego -->
+            <button id="reiniciar" disabled>Reiniciar</button><!-- Añadimos boton para reiniciar el juego -->
             <p id="parrafo-intentos">Intentos: <span id="contador">0</span></p>
           </menu>
         <section id="tablero"></section>

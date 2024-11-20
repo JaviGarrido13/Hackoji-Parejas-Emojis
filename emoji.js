@@ -41,7 +41,7 @@ function iniciarJuego(){
 
   tablero.innerHTML = '' // Partimos de tablero vacio y metemos cartas
   cartas.forEach((emoji)=>{
-    const carta = document.createElement('div')
+    const carta = document.createElement('article')
     carta.classList.add('carta')
     carta.dataset.emoji = emoji
     carta.addEventListener('click', girarCarta)
@@ -139,7 +139,7 @@ function mostrarModal(){
   } else {
     mensajeFinal.textContent=`Eres un paquete, tu puntiación es: ${puntuacion}`;
   }
-  modal.style.display = 'flex'  // display felx al modal
+  modal.style.display = 'flex'  // display flex al modal
 }
 
 function fueraModal(){
