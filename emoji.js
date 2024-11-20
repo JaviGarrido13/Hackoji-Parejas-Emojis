@@ -60,6 +60,7 @@ function iniciarJuego(){
 
   cartas = [...emojis, ...emojis]
   cartas.sort(()=>Math.random()-0.5) // duplico cartas y mezclamos
+  const fragmento = document.createDocumentFragment() // creamos el fragmento
 
   tablero.innerHTML = '' // Partimos de tablero vacio y metemos cartas
   cartas.forEach((emoji)=>{/* Recorremos el array de emoji para crear el elemento carta */
@@ -67,8 +68,9 @@ function iniciarJuego(){
     carta.classList.add('carta')
     carta.dataset.emoji = emoji
     carta.addEventListener('click', girarCarta)
-    tablero.append(carta)
+    fragmento.append(carta)
   })
+  tablero.append(fragmento) // Append al tablero del fragmento
   tablero.style.visibility = "visible";/* Mostramos nuestro tablero y nuestros intentos */
   parrafointentos.style.visibility = "visible";
 }
